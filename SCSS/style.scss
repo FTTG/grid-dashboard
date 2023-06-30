@@ -1,1 +1,30 @@
 @import './resets', './variables';
+
+nav {
+    background-color: var(--nav-b-color);
+    grid-area: nav;
+}
+
+header {
+    background-color: var(--header-b-color);
+    grid-area: head;
+}
+
+main {
+    background-color: var(--main-b-color);
+    grid-area: body;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas:
+        "nav head"
+        "nav body";
+}
